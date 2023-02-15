@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: badserver-deployment
+  labels:
+    app: badserver-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: badserver-app
+  template:
+    metadata:
+      labels:
+        app: badserver-app
+        app.kubernetes.io/name: badserver-app
+    spec:
+      containers:
+      - name: badserver
+        image: badserver:1

@@ -1,0 +1,3 @@
+FROM python:3.8-alpine
+COPY kubetest.py /kubetest.py
+CMD python -u kubetest.py
