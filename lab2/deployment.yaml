@@ -5,14 +5,13 @@ metadata:
   labels:
     app: badserver-app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: badserver-app
+      app.kubernetes.io/name: badserver-app
   template:
     metadata:
       labels:
-        app: badserver-app
         app.kubernetes.io/name: badserver-app
     spec:
       containers:
