@@ -37,6 +37,11 @@ while true; do kubectl top po; sleep 1; done
 ```
 
 # Terminal 2
+```
+kubectl get po --watch
+```
+
+# Terminal 3
 
 ```
  while true; do curl localhost:30000/fib?nterms=20; done

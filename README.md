@@ -6,4 +6,4 @@
 
 ## lab 3 - robustness
 
-## lab 4 - autoskalning
+## lab 4 - autoscaling
