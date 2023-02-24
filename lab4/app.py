@@ -23,6 +23,6 @@ def fibonacci():
        ret += f"{n1} "
     return f"{ret}\n"
 
-@app.route("/health")
-def health():
+@app.route("/ready")
+def ready():
     return "OK", 200
