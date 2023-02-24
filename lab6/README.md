@@ -30,6 +30,10 @@ kind load docker-image lab:6
 # Stress
 
 ```
- while true; do curl localhost:30000/div?dividend=99; done
+ while true; do curl localhost:30000/fib?nterms=20; done
  ```
- 
+
+# Monitor
+```
+while true; do kubectl top po; sleep 1; done
+```

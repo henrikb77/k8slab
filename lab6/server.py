@@ -9,7 +9,20 @@ app = Flask(__name__)
 def hello():
     return "Hello\n"
 
-@app.route('/div')
-def divide_by_three():
-    dividend = int(request.args.get('dividend')) 
-    return str(dividend/3) + "\n"
+@app.route('/fib')
+def fibonacci():
+    nterms = int(request.args.get('nterms'))
+    count = 0
+    n1, n2 = 0, 1
+    ret = ""
+    while count < nterms:
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
+       ret += f"{n1} "
+    return f"{ret}\n"
+
+@app.route("/health")
+def health():
+    return "OK", 200
