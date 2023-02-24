@@ -9,5 +9,5 @@ def root():
     return f"App v{os.getenv('VERSION')} running\n"
 
 @app.route("/ready")
-def health():
+def ready():
     return "OK", 200
