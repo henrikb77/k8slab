@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: lab
-        image: lab:5
+        image: lab:2
         resources:
           requests:
             memory: "100Mi"

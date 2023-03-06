@@ -1,7 +1,4 @@
 
-```
-cd lab1
-```
 
 # Steg 1
 ```
@@ -11,6 +8,7 @@ docker build -t lab:1 .
 
 kind load docker-image lab:1 # ekvivalent till att ladda upp till registry (Harbor, Dockerhub)
                              # detta är en specialare för lokalt kind-kluster
+kubectl apply -f resources.yaml
 ```
 
 # Steg 2
@@ -25,6 +23,12 @@ kubectl logs <poddens namn>
 ```
 replicas: 2
 ```
+
+| Terminal 1 | Terminal 2 |
+|------------|------------|
+| `kubectl get po --watch`  | `kubectl apply -f resources.yaml` |
+
+
 
 ## Terminal 1
 ```
