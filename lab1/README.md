@@ -28,14 +28,3 @@ replicas: 2
 |------------|------------|
 | `kubectl get po --watch`  | `kubectl apply -f resources.yaml` |
 
-
-
-## Terminal 1
-```
-kubectl get po --watch
-```
-
-## Terminal 2
-```
-kubectl apply -f resources.yaml
-```
