@@ -1,4 +1,10 @@
 
+# Step 0
+For Mac users:
+```
+brew install watch
+```
+
 
 # Steg 1
 ```
@@ -27,4 +33,9 @@ replicas: 2
 | Terminal 1 | Terminal 2 |
 |------------|------------|
 | `kubectl get po --watch`  | `kubectl apply -f resources.yaml` |
+
+# Steg 4
+```
+kubectl delete deploy lab-deployment
+```
 
