@@ -13,34 +13,18 @@ curl localhost:30000
 
 # Steg 2
 
-## Terminal 1
-```
-while true; do curl localhost:30000; sleep 1; done
-```
+| Terminal 1 | Terminal 2 | Terminal 3 |
+|------------|------------|------------|
+| `while true; do curl  -m 2 localhost:30000; sleep 1; done` | `watch kubectl get po` | `curl localhost:30000/crash`|
 
-## Terminal 2
-```
-kubectl get po --watch
-```
-
-## Terminal 3
-```
-curl localhost:30000/crash
-```
 
 # Steg 3
 
-## Terminal 1
-```
-while true; do curl  -m 2 localhost:30000; sleep 1; done
-```
+| Terminal 1 | Terminal 2 | Terminal 3 |
+|------------|------------|------------|
+| `while true; do curl  -m 2 localhost:30000; sleep 1; done`| `watch kubectl get po`| `curl localhost:30000/hang` |
 
-## Terminal 2
+# Steg 4
 ```
-kubectl get po --watch
-```
-
-## Terminal 3
-```
-curl localhost:30000/hang
+kubectl delete deploy lab-deployment
 ```
