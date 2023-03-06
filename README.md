@@ -9,3 +9,8 @@
 ## lab 4 - autoscaling
 
 ## lab 5 - helm & gitops
+
+## Finally:
+```
+kind delete cluster
+```

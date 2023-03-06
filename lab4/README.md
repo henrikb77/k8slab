@@ -1,4 +1,4 @@
-# Steg 1
+# Förberedelser
 
 ## Hämta metrics-server
 
@@ -16,34 +16,28 @@ curl -L -o metrics-server.yaml https://github.com/kubernetes-sigs/metrics-server
 ## Ta bort anti-affinity för att kunna testa på lokalt kind-kluster
 Ta bort .spec.template.spec.affinity.
 
-## Steg 2
+## Steg 1
 
 ### Deploya metrics-server
 ```
 kubectl apply -f metrics-server.yaml
+kubectl wait pods -n kube-system -l k8s-app=metrics-server --for condition=Ready
 ```
 
 ### Deploya test-app
 ```
-kubectl delete deploy lab-deployment
 docker build -t lab:4 .
 kind load docker-image lab:4
 kubectl apply -f resources.yaml
 ```
 
-# Terminal 1
-```
-while true; do kubectl top po; sleep 1; done
-```
+# Steg 2
 
-# Terminal 2
-```
-kubectl get po --watch
-```
+| Terminal 1 | Terminal 2 | Terminal 3 |
+|------------|------------|------------|
+| `watch kubectl top po`| `watch kubectl get po`| `while true; do curl localhost:30000/fib?nterms=20; done`|
 
-# Terminal 3
-
+# Steg 3
 ```
- while true; do curl localhost:30000/fib?nterms=20; done
- ```
-
+kubectl delete -f resources.yaml
+```
