@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: lab
-        image: lab:2
+        image: lab:{{ .Values.imageVersion }}
         resources:
           requests:
             memory: "100Mi"
