@@ -17,3 +17,8 @@ brew install fluxcd/tap/flux
 # Steg 2
 Byt imageVersion i gitops - gör en release!
 
+## Finally:
+```
+kind delete cluster
+```
+

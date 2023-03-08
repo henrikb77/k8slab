@@ -35,4 +35,4 @@ def crash():
 @app.route("/hang")
 def hang():
     lock.acquire()
-    return "Forgot to release lock", 200
+    return "Forgot to release lock\n", 200

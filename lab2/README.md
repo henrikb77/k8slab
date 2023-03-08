@@ -19,7 +19,7 @@ curl localhost:30000
 ||| `kind load docker-image lab:2.1`|
 ||| `kubectl apply -f resources21.yaml`|
 
-# Steg 3
+# Finally:
 ```
 kubectl delete deploy lab-deployment
 ```

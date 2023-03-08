@@ -24,7 +24,7 @@ curl localhost:30000
 |------------|------------|------------|
 | `while true; do curl  -m 2 localhost:30000; sleep 1; done`| `watch kubectl get po`| `curl localhost:30000/hang` |
 
-# Steg 4
+# Finally:
 ```
 kubectl delete deploy lab-deployment
 ```

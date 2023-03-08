@@ -37,7 +37,7 @@ kubectl apply -f resources.yaml
 |------------|------------|------------|
 | `watch kubectl top po`| `watch kubectl get po`| `while true; do curl localhost:30000/fib?nterms=20; done`|
 
-# Steg 3
+# Finally:
 ```
 kubectl delete -f resources.yaml
 ```

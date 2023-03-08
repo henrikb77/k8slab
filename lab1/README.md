@@ -1,6 +1,6 @@
 
 # Step 0
-For Mac users:
+Fär Mac-användare:
 ```
 brew install watch
 ```
@@ -32,9 +32,10 @@ replicas: 2
 
 | Terminal 1 | Terminal 2 |
 |------------|------------|
-| `kubectl get po --watch`  | `kubectl apply -f resources.yaml` |
+| `watch kubectl get po`  | `kubectl apply -f resources.yaml` |
+|| `kubectl delete po <poddens namn>` |
 
-# Steg 4
+# Finally:
 ```
 kubectl delete deploy lab-deployment
 ```
