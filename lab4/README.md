@@ -1,4 +1,4 @@
-# Förberedelser
+# Steg 0
 
 ## Hämta metrics-server
 
@@ -18,13 +18,13 @@ Ta bort .spec.template.spec.affinity.
 
 ## Steg 1
 
-### Deploya metrics-server
+### Deploy metrics-server
 ```
 kubectl apply -f metrics-server.yaml
 kubectl wait pods -n kube-system -l k8s-app=metrics-server --for condition=Ready
 ```
 
-### Deploya test-app
+### Deploy test-app
 ```
 docker build -t lab:4 .
 kind load docker-image lab:4
