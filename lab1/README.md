@@ -1,6 +1,6 @@
 
 # Step 0
-Fär Mac-användare:
+För Mac-användare:
 ```
 brew install watch
 ```
