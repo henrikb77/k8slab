@@ -1,0 +1,7 @@
+# want prometheus to monitor ALL pod monitors, default settings implies several prometheuses picking different monitors
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    probeSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false

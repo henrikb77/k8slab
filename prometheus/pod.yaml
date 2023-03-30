@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: foo
+  labels:
+    run: promtest
+  name: promtest
+spec:
+  containers:
+  - image: lab:6
+    name: promtest
+
+    ports:
+    - containerPort: 8000
+      name: foo
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

@@ -1,0 +1,9 @@
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo update
+kubectl create ns ing
+helm install -n ing ing ingress-nginx/ingress-nginx -f values.yaml
+kubectl create ns app
+docker build -t lab:8
+kind load docker-image lab:8
+kubectl apply -n app -f resources.yaml
+curl demo.kb.se:30000

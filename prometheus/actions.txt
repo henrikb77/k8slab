@@ -1,0 +1,2 @@
+helm install prometheus prometheus-community/kube-prometheus-stack -f values.yaml
+kubectl run promtest --image=lab:6 --port 8000

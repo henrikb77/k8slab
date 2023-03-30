@@ -1,0 +1,2 @@
+keyrenewperiod: 0 # disabled, in order to have one and only private key that can be backed up and re-used in a disaster scenario
+namespace: sealed-secrets

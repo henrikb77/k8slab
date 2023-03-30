@@ -1,0 +1,15 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: unencrypted
+  namespace: default
+spec:
+  encryptedData:
+    foo: AgA+l+rEl8pByl+sBmzS03O4mAFq/PAfSE/dZpKxptR97hJFKV4O6+QeOpWZKVeXUQGWNrwLr/KFCcxF/Iv/ndKxWr9exYsc0zRq5lL1PFAtO/s5g+JZAVP+EMGS0f7OoE3Z8Tsw4B4QSrKukWCa7nrSI5scttfrq5PG5l7uIdz7SwHqG/xpY5/P5OM7XXwRvyOEiYixLWWlf0bDWUsatEvBB7SgDwcFJlMODrRFvL1cktesurh5pgKIoAUu5z1Nq0896BBnbHuq96FY7tiojwDbiQGGkVfTGNg4EYvw3WsmPn2Tawt8oQc7RZUxpf4lNnTkxc04TOf3ofYEwut0HiWAGgSv6Iotxykyh4ZBs5gUwT6SvclHHqIG1UfOIm+7PgkAw8ECuVcAtBCM/0GPaU/BImrvznTfaMRddBS9HSsEQ/QUiYNq3Bog56VeKXCX10wvekLfCCe+aGZN1V0ZMiTOOiOm4DqV99J62MMANf/GwljZeLn1oci/6UonF21Mw4+PKbRxnyycfxhzGg3D+M+TwipOPNu4MW2kKnwuhsiNatcLe0nTchG+5JZzA3HK5U0mvEhGJ0qt4z+NRcS8oknUtNWtJ/38965p+affdFdxSCyWS2YyH4ACFT3fG5RfN0P/LzC3XF4ZpTPf+9110Tq4EU6rE/A+dGe9TqFpkrrQkSDpYMviLkSzkfKzta+t5BbgoPc=
+  template:
+    metadata:
+      creationTimestamp: null
+      name: unencrypted
+      namespace: default
+
